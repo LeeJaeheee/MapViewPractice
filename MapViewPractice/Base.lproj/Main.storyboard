@@ -52,10 +52,24 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ui1-Fi-n1M">
+                                <rect key="frame" x="327" y="724.66666666666663" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ui1-Fi-n1M" secondAttribute="height" multiplier="1:1" id="HIo-l9-Hcu"/>
+                                    <constraint firstAttribute="width" constant="50" id="i8A-S3-y4p"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="currentLocationButtonTapped:" destination="SMJ-Ob-f1i" eventType="touchUpInside" id="B78-aG-meh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ovf-pQ-zWv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ovf-pQ-zWv" firstAttribute="trailing" secondItem="ui1-Fi-n1M" secondAttribute="trailing" constant="16" id="Hkm-4h-bPZ"/>
+                            <constraint firstItem="fRg-Mf-jAC" firstAttribute="bottom" secondItem="ui1-Fi-n1M" secondAttribute="bottom" multiplier="1.1" id="OJd-DJ-rT4"/>
                             <constraint firstItem="fRg-Mf-jAC" firstAttribute="trailing" secondItem="Ovf-pQ-zWv" secondAttribute="trailing" id="WbV-Iy-sF6"/>
                             <constraint firstAttribute="bottom" secondItem="fRg-Mf-jAC" secondAttribute="bottom" id="gAw-au-9El"/>
                             <constraint firstItem="fRg-Mf-jAC" firstAttribute="leading" secondItem="Ovf-pQ-zWv" secondAttribute="leading" id="pBY-2H-AQZ"/>
@@ -70,6 +84,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currentLocationButton" destination="ui1-Fi-n1M" id="Cl1-V8-pZW"/>
                         <outlet property="filterBarButton" destination="tQO-Gx-06A" id="Jo4-tX-JvJ"/>
                         <outlet property="mapView" destination="fRg-Mf-jAC" id="AaD-EI-hOc"/>
                     </connections>
